@@ -15,6 +15,10 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {
   }
 
+  onMessageChange(event: any) {
+    this.message = event.target.value;
+  }
+  
   ngOnInit(): void{
     Pusher.logToConsole = true;
 
